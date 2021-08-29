@@ -1,0 +1,2 @@
+name = 'juntagrico-badges'
+version = '0.0.1'

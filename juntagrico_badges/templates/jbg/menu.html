@@ -1,0 +1,5 @@
+{% load juntagrico.common %}
+{% load i18n %}
+<li class="nav-item">
+    <a class="nav-link {{ request|activemenu:"badges" }}" href="{% url 'jbg-home' %}">{% translate "Abzeichen" %}</a>
+</li>

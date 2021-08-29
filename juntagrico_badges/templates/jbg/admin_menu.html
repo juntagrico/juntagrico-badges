@@ -1,0 +1,20 @@
+{% load juntagrico.common %}
+{% load i18n %}
+{% if perms.juntagrico.can_view_badges %}
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#badge">
+            {% trans "Abzeichen" %}
+            <i class="fas fa-angle-right">
+            </i>
+        </a>
+        <div class="collapse" id="badge">
+            <ul class="nav flex-column admin-menu subadmin-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'jbg-admin-memberslist' %}">
+                        {% trans "Mitglieder " %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </li>
+{% endif %}

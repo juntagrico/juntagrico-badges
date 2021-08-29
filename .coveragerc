@@ -1,0 +1,5 @@
+[run]
+include =
+    juntagrico_badges/*
+omit =
+    juntagrico_badges/migrations/*

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load juntagrico.config %}
+{% load i18n static %}
+{% block page_title %}
+    <h3>{% translate "Abzeichen" %}</h3>
+{% endblock %}
+
+{% block content %}
+    <h4>{% translate "Deine Abzeichen" %}</h4>
+        <div class="row">
+            {% for badge in badges %}
+                {% include 'jbg/snippets/badge.html' with badge=badge %}
+            {% endfor %}
+        </div>
+    <h4>{% translate "Abzeichen hinzufügen" %}</h4>
+        <div class="row">
+            {% for available_badge in available_badges %}
+                {% include 'jbg/snippets/badge.html' with badge=available_badge %}
+            {% endfor %}
+        </div>
+{% endblock %}
+
+{% block styles %}
+    <link href="{% static "jbg/css/badge.css" %}" rel="stylesheet"/>
+{% endblock %}
