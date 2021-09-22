@@ -1,1 +1,0 @@
-from juntagrico_badges.entity.badges import Badge
