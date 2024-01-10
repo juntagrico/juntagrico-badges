@@ -1,6 +1,8 @@
 # juntagrico-badges
 
 [![image](https://github.com/juntagrico/juntagrico-badges/actions/workflows/juntagrico-ci.yml/badge.svg?branch=main&event=push)](https://github.com/juntagrico/juntagrico-badges/actions/workflows/juntagrico-ci.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4e1874454ccc91505707/maintainability)](https://codeclimate.com/github/juntagrico/juntagrico-badges/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4e1874454ccc91505707/test_coverage)](https://codeclimate.com/github/juntagrico/juntagrico-badges/test_coverage)
 [![image](https://img.shields.io/github/last-commit/juntagrico/juntagrico-badges.svg)](https://github.com/juntagrico/juntagrico-badges)
 [![image](https://img.shields.io/github/commit-activity/y/juntagrico/juntagrico-badges)](https://github.com/juntagrico/juntagrico-badges)
 

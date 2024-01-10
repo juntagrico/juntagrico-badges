@@ -1,4 +1,4 @@
 -r requirements.txt
 juntagrico==1.4.1
-flake8
+ruff
 coverage
