@@ -18,16 +18,18 @@ def home(request):
 @login_required
 def add_badge(request, badge_id):
     badge = get_object_or_404(Badge, id=badge_id)
-    member = request.user.member
-    member.badges.add(badge)
-    member.save()
+    if badge.self_assignable:
+        member = request.user.member
+        member.badges.add(badge)
+        member.save()
     return redirect('jbg:home')
 
 
 @login_required
 def remove_badge(request, badge_id):
     badge = get_object_or_404(Badge, id=badge_id)
-    member = request.user.member
-    member.badges.remove(badge)
-    member.save()
+    if badge.self_assignable:
+        member = request.user.member
+        member.badges.remove(badge)
+        member.save()
     return redirect('jbg:home')
