@@ -8,4 +8,13 @@
 This is an extension for juntagrico. You can find more information about juntagrico here
 (https://github.com/juntagrico/juntagrico)
 
-For more information information about how to install this app hop over to the doc section of the repo.
+## Features
+
+* Badges can be added in the data administration
+* Members have a new menu "Badges" where they can see their assigned badges
+* The admin can configure for each badge if members can assign them themselves
+* The Admin can see a list of all members having badges which he can filter and send emails to matching members
+
+## Installation
+
+See [docs/instalation](https://github.com/juntagrico/juntagrico-badges/blob/main/juntagrico_badges/docs/instalation.rst)
