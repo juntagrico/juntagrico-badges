@@ -3,7 +3,8 @@
 [![image](https://github.com/juntagrico/juntagrico-badges/actions/workflows/juntagrico-ci.yml/badge.svg?branch=main&event=push)](https://github.com/juntagrico/juntagrico-badges/actions/workflows/juntagrico-ci.yml)
 [![image](https://img.shields.io/github/last-commit/juntagrico/juntagrico-badges.svg)](https://github.com/juntagrico/juntagrico-badges)
 [![image](https://img.shields.io/github/commit-activity/y/juntagrico/juntagrico-badges)](https://github.com/juntagrico/juntagrico-badges)
-[![Requirements Status](https://requires.io/github/juntagrico/juntagrico-badges/requirements.svg?branch=main)](https://requires.io/github/juntagrico/juntagrico-badges/requirements/?branch=main)
+
+Add badges to members in juntagrico.
 
 This is an extension for juntagrico. You can find more information about juntagrico here
 (https://github.com/juntagrico/juntagrico)
@@ -17,4 +18,28 @@ This is an extension for juntagrico. You can find more information about juntagr
 
 ## Installation
 
-See [docs/instalation](https://github.com/juntagrico/juntagrico-badges/blob/main/juntagrico_badges/docs/instalation.rst)
+
+Install juntagrico-badge via `pip`
+
+    $ pip install juntagrico-badges
+
+or add it in your projects `requirements.txt`
+
+In `settings.py` add `'juntagrico_badges',`.
+
+```python
+INSTALLED_APPS = [
+    ...
+    'juntagrico',
+    'juntagrico_badges',
+]
+```
+
+In your `urls.py` you also need to extend the pattern:
+
+```python
+urlpatterns = [
+    ...
+    path('', include('juntagrico_badges.urls')),
+]
+```

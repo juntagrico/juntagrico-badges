@@ -19,12 +19,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name=juntagrico_badges.name,
-    version=juntagrico_badges.name,
+    version=juntagrico_badges.version,
     packages=find_packages(),
     include_package_data=True,
     license='LPGLv3',  # example license
-    description='juntagrico-badges',
+    description='Add badges to members in juntagrico',
     long_description=README,
+    long_description_content_type='text/markdown',
     url='http://juntagrico.org',
     author='juntagrico',
     author_email='info@juntagrico.org',

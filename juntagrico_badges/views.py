@@ -21,7 +21,7 @@ def add_badge(request, badge_id):
     member = request.user.member
     member.badges.add(badge)
     member.save()
-    return redirect('jbg-home')
+    return redirect('jbg:home')
 
 
 @login_required
@@ -30,4 +30,4 @@ def remove_badge(request, badge_id):
     member = request.user.member
     member.badges.remove(badge)
     member.save()
-    return redirect('jbg-home')
+    return redirect('jbg:home')

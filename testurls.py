@@ -6,8 +6,8 @@ from django.contrib import admin
 from juntagrico import views
 
 urlpatterns = [
-    path(r'admin/', admin.site.urls),
-    path(r'', include('juntagrico.urls')),
-    path(r'', include('juntagrico_badges.urls')),
-    path(r'', views.home),
+    path('admin/', admin.site.urls),
+    path('', include('juntagrico.urls')),
+    path('', include('juntagrico_badges.urls')),
+    path('', views.home),
 ]
