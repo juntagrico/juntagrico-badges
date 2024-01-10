@@ -55,7 +55,7 @@ WHITELIST_EMAILS = []
 def whitelist_email_from_env(var_env_name):
     email = os.environ.get(var_env_name)
     if email:
-        WHITELIST_EMAILS.append(email.replace('@gmail.com', '(\+\S+)?@gmail.com'))
+        WHITELIST_EMAILS.append(email)
 
 
 if DEBUG is True:
@@ -78,7 +78,7 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
-DATE_INPUT_FORMATS = ['%d.%m.%Y',]
+DATE_INPUT_FORMATS = ['%d.%m.%Y']
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
