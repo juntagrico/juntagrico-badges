@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'crispy_forms',
     'juntagrico',
     'juntagrico_badges',
 ]
@@ -108,3 +109,5 @@ TEMPLATES = [
 LOGIN_REDIRECT_URL = "/my/home"
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
