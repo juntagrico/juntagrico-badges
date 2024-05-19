@@ -1,7 +1,7 @@
 from django.urls import reverse
 
 from juntagrico_badges.entity.badges import Badge
-from test import BadgesTestCase
+from . import BadgesTestCase
 
 
 class BadgesTests(BadgesTestCase):
@@ -23,6 +23,5 @@ class BadgesTests(BadgesTestCase):
         self.assertFalse(self.member in self_assignable_badge.members.all())
 
     def test_admin(self):
-        admin = self.create_admin()
         self.assertGet(reverse('jbg:admin-memberslist'), 302)
-        self.assertGet(reverse('jbg:admin-memberslist'), member=admin)
+        self.assertGet(reverse('jbg:admin-memberslist'), member=self.admin)
