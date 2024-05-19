@@ -1,0 +1,25 @@
+{% extends "juntagrico/menu/admin.html" %}
+{% load i18n %}
+{% load juntagrico.config %}
+{% block extend %}
+    {% if perms.juntagrico.can_view_badges %}
+        {% vocabulary "member_pl" as v_member_pl %}
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#badge">
+                {% trans "Abzeichen" %}
+                <i class="fas fa-angle-right">
+                </i>
+            </a>
+            <div class="collapse" id="badge">
+                <ul class="nav flex-column admin-menu subadmin-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'jbg:admin-memberslist' %}">
+                            {{ v_member_pl }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

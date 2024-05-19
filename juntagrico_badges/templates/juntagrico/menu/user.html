@@ -1,0 +1,10 @@
+{% extends "juntagrico/menu/user.html" %}
+{% load i18n %}
+{% load juntagrico.common %}
+{% load juntagrico.config %}
+{% block extend %}
+    <li class="nav-item">
+        <a class="nav-link {{ request|activemenu:"badges" }}" href="{% url 'jbg:home' %}">{% translate "Abzeichen" %}</a>
+    </li>
+    {{ block.super }}
+{% endblock %}

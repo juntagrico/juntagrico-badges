@@ -1,1 +1,3 @@
-juntagrico~=1.5.0
+-e .
+coverage
+ruff
