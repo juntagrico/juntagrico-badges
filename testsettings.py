@@ -14,13 +14,15 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
+    'juntagrico.apps.JuntagricoAdminConfig',
     'crispy_forms',
+    'crispy_bootstrap4',
     'juntagrico_badges',
     'juntagrico',
     'import_export',
     'impersonate',
-    'fontawesomefree',
+    'django_select2',
+    'djrichtextfield',
 ]
 
 DATABASES = {
@@ -104,14 +106,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'juntagrico.context_processors.vocabulary',
             ],
-            'debug': True
+            'debug': DEBUG
         },
     },
 ]
 
 LOGIN_REDIRECT_URL = "/"
-
-SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

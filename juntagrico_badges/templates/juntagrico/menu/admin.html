@@ -5,12 +5,12 @@
     {% if perms.juntagrico.can_view_badges %}
         {% vocabulary "member_pl" as v_member_pl %}
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#badge">
+            <a class="nav-link{% if 'admin-memberslist' not in request.resolver_match.url_name %} collapsed{% endif %}"
+               data-toggle="collapse" href="#badge">
+                <i class="bi bi-caret-down turn"></i>
                 {% trans "Abzeichen" %}
-                <i class="fas fa-angle-right">
-                </i>
             </a>
-            <div class="collapse" id="badge">
+            <div class="collapse{% if 'admin-memberslist' in request.resolver_match.url_name %} show{% endif %}" id="badge">
                 <ul class="nav flex-column admin-menu subadmin-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'jbg:admin-memberslist' %}">

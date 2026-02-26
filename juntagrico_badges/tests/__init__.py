@@ -6,6 +6,7 @@ class BadgesTestCase(JuntagricoTestCase):
     @classmethod
     def setUpTestData(cls):
         cls.load_members()
+        cls.default_member = cls.member
         cls.set_up_badge()
 
     @classmethod
