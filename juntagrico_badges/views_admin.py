@@ -5,8 +5,6 @@ from juntagrico.entity.member import Member
 
 @permission_required('badge.can_change')
 def members_list(request):
-    render_dict = {
-        'change_date_disabled': True,
+    return render(request, 'jbg/management_lists/badges.html', {
         'management_list': Member.objects.filter(badges__isnull=False).distinct()
-    }
-    return render(request, 'jbg/management_lists/badges.html', render_dict)
+    })
